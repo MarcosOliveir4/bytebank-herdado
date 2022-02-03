@@ -7,14 +7,11 @@ public class Gerente extends Funcionario {
     }
 
     public boolean autentica(int senha) {
-        if(this.senha == senha) {
-            return true;
-        }
-        return false;
+        return this.senha == senha;
     }
 
     public double getBonificacao() {
-        return this.getSalario();
+        return super.getBonificacao() + super.getSalario();
     }
 
     public void setSenha(int senha) {
